@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Attack Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('home') }}" class="nav-brand">CardioXpulse</a>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('predict') }}" class="nav-link">Prediction</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Heart Attack Risk Prediction</h1>
+        <p>Early detection can save lives. Use our advanced AI system to assess your heart health.</p>
+    </header>
+
+    <section class="precautions">
+        <h2>ESSENTIAL HEART HEALTH PRECAUTIONS</h2>
+        <div class="card">
+            <span class="heart-icon">❤️</span>
+            <h3>Know Your Numbers</h3>
+            <p>Monitor your blood pressure, cholesterol, BMI, and blood sugar regularly. Knowledge is the first step to prevention.</p>
+        </div>
+        <a href="{{ url_for('predict') }}" class="predict-btn">Check Your Risk</a>
+    </section>
+
+    <section class="understanding-heart">
+        <h2>Understanding Heart Health</h2>
+        <div class="info-cards">
+            <div class="info-card">
+                <span class="info-icon">❤️</span>
+                <h3>Early Detection Saves Lives</h3>
+                <p>Recognizing early warning signs can reduce heart attack risk by up to 80%.</p>
+            </div>
+            <div class="info-card">
+                <span class="info-icon">🩺</span>
+                <h3>Regular Check-ups</h3>
+                <p>Regular monitoring of heart health indicators is crucial for prevention.</p>
+            </div>
+            <div class="info-card">
+                <span class="info-icon">💚</span>
+                <h3>Healthy Lifestyle</h3>
+                <p>Exercise, balanced diet, and stress management reduce heart attack risks.</p>
+            </div>
+        </div>
+        <blockquote>"Prevention is better than cure. Take control of your heart health today."</blockquote>
+    </section>
+
+    <section class="benefits">
+        <h2>Benefits of Early Prediction</h2>
+        <ul>
+            <li>✅ Identify risk factors before they become serious</li>
+            <li>✅ Personalized health recommendations</li>
+            <li>✅ Track your heart health progress over time</li>
+            <li>✅ Make informed lifestyle changes</li>
+        </ul>
+    </section>
+</body>
+</html>

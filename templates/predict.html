@@ -4,93 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Attack Prediction Form</title>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> -->
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
 </head>
 <body>
+    <nav>
+        <a href="#" class="nav-brand">Heart Attack Predictor</a>
+        <div class="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="prediction-form">
             <h2>Heart Attack Risk Assessment</h2>
-            <form id="predictionForm"  action="/sub" method="POST">
-                <div class="step active" data-step="1">
-                    <h3>Basic Information</h3>
-                    <div class="form-group">
-                        <input type="number" id="age" name="Age"  required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="trestbps" name="Gender" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" id="chol" name="Heart_Rate" required>
-                    </div>
-                    <button type="button" class="next-btn" onclick="nextStep(1)">Next</button>
+            <form action="{{ url_for('result') }}" method="POST">
+                <div class="form-group">
+                    <label>Age:</label>
+                    <input type="number" name="Age" placeholder="Enter your age" required>
                 </div>
-
-                <div class="step" data-step="2">
-                    <h3>Medical Readings</h3>
-                    <div class="form-group">
-                        <input type="number" id="fbs" name="Systolic_blood_pressure" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" id="restecg" name="Diastolic_blood_pressure" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" id="thalach" name="Blood_sugar" required>
-                    </div>
-                    <button type="button" class="prev-btn" onclick="prevStep(2)">Previous</button>
-                    <button type="button" class="next-btn" onclick="nextStep(2)">Next</button>
+                <div class="form-group">
+                    <label>Gender (0 for Female, 1 for Male):</label>
+                    <input type="number" name="Gender" placeholder="Enter 0 or 1" required>
                 </div>
-
-                <div class="step" data-step="3">
-                    <h3>Final Details</h3>
-                    <div class="form-group">
-                        <input type="number" id="ca" name="CK-MB" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" id="thal" name="Troponin" required>
-                    </div>
-                    
-                    <button type="button" class="prev-btn" onclick="prevStep(3)">Previous</button>
-                    <button type="submit" class="submit-btn" >Get Prediction</button>
+                <div class="form-group">
+                    <label>Heart Rate:</label>
+                    <input type="number" name="Heart_Rate" placeholder="Enter heart rate" required>
                 </div>
+                <div class="form-group">
+                    <label>Systolic Blood Pressure:</label>
+                    <input type="number" name="Systolic_blood_pressure" placeholder="Enter systolic pressure" required>
+                </div>
+                <div class="form-group">
+                    <label>Diastolic Blood Pressure:</label>
+                    <input type="number" name="Diastolic_blood_pressure" placeholder="Enter diastolic pressure" required>
+                </div>
+                <div class="form-group">
+                    <label>Blood Sugar:</label>
+                    <input type="number" name="Blood_sugar" placeholder="Enter blood sugar level" required>
+                </div>
+                <div class="form-group">
+                    <label>CK-MB:</label>
+                    <input type="number" name="CK-MB" placeholder="Enter CK-MB level" required>
+                </div>
+                <div class="form-group">
+                    <label>Troponin:</label>
+                    <input type="number" name="Troponin" placeholder="Enter Troponin level" required>
+                </div>
+                <button type="submit" class="submit-btn">Get Prediction</button>
             </form>
         </div>
     </div>
-    <!-- <script>
-        async function submitForm() {
-            const formData = {
-                age: document.getElementById('age').value,
-                trestbps: document.getElementById('trestbps').value,
-                chol: document.getElementById('chol').value,
-                fbs: document.getElementById('fbs').value,
-                restecg: document.getElementById('restecg').value,
-                thalach: document.getElementById('thalach').value,
-                ca: document.getElementById('ca').value,
-                thal: document.getElementById('thal').value
-            };
-
-            try {
-                const response = await fetch('http://localhost:5000/predict', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                const data = await response.json();
-                
-                if (response.ok) {
-                    window.location.href = `result.html?result=${data.result}`;
-                } else {
-                    alert(data.error || 'An error occurred');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('An error occurred. Please try again.');
-            }
-        }
-    </script> -->
-    <!-- <script src="script.js"></script> -->
 </body>
 </html>

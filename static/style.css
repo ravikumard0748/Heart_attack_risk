@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero {
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.precautions {
+    background: white;
+    color: black;
+    padding: 30px;
+    margin: 30px auto;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.precautions h2 {
+    font-size: 24px;
+    color: #2575fc;
+    font-weight: 600;
+}
+
+.card {
+    background: #b2f0a7;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.heart-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.predict-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.predict-btn:hover {
+    background: #218838;
+}
+
+/* Understanding Heart Health Section */
+.understanding-heart {
+    background: white;
+    color: black;
+    padding: 30px;
+    margin: 30px auto;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.understanding-heart h2 {
+    font-size: 26px;
+    color: #2575fc;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.info-cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.info-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+blockquote {
+    font-style: italic;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Benefits Section */
+.benefits {
+    background: white;
+    color: black;
+    padding: 30px;
+    margin: 30px auto;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.benefits h2 {
+    font-size: 24px;
+    color: #2575fc;
+    font-weight: 600;
+}
+
+.benefits ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.benefits li {
+    font-size: 18px;
+    margin: 5px 0;
+}
